@@ -39,3 +39,14 @@ a{color:inherit}.section-pad{padding:125px 6vw;max-width:var(--max);margin:auto}
 .hero-art .hero-island .island-shadow{z-index:0!important;display:block!important}
 .hero-art .art-card{z-index:5}
 @media(max-width:900px){.hero-art .hero-island{width:88%!important;min-width:0!important;height:42%!important}.hero-art .hero-island .block-a{width:58px!important;height:58px!important;top:-30px!important}.hero-art .hero-island .block-b{width:44px!important;height:80px!important;top:-48px!important}}
+
+/* SVG FLOATING ISLAND — explicit render */
+.hero-art .island-stage{position:absolute!important;left:50%!important;top:50%!important;width:92%!important;height:92%!important;z-index:18!important;transform:translate(-50%,-45%)!important;pointer-events:none!important;display:block!important;visibility:visible!important;opacity:1!important}
+.hero-art .island-svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}
+.hero-art .island-float{transform-origin:350px 250px;animation:islandBob 6s ease-in-out infinite}
+.hero-art .island-top{filter:drop-shadow(0 12px 10px rgba(0,0,0,.45))}
+.hero-art .island-buildings{transform-origin:350px 200px}
+.hero-art .island-light{filter:drop-shadow(0 0 14px #b9ff38)}
+@keyframes islandBob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-13px) rotate(1deg)}}
+@media(max-width:900px){.hero-art .island-stage{width:105%!important;height:85%!important;top:55%!important}}
+@media(prefers-reduced-motion:reduce){.hero-art .island-float{animation:none}}
