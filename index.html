@@ -42,15 +42,36 @@
           </div>
         </div>
         <div class="hero-art reveal" aria-hidden="true">
-          <div class="art-grid"></div><div class="hero-island"><div class="island-shadow"></div><div class="island-surface"><span class="island-mark">01</span><span class="island-label">FROM IDEA<br>TO IMPACT</span><i class="island-dot"></i></div><div class="island-block block-a"></div><div class="island-block block-b"></div><div class="island-orbit"></div></div>
-          <div class="orb orb-a"></div>
-          <div class="orb orb-b"></div>
-          <div class="art-card card-main">
-            <span class="tiny">ZERO ONE / 001</span>
-            <strong>IDEA<br><i>→</i> IMPACT</strong>
-            <div class="scan"></div>
-            <span class="card-coord">30.0444° N<br>31.2357° E</span>
+          <div class="art-grid"></div>
+          <div class="island-stage">
+            <svg class="island-svg" viewBox="0 0 700 500" role="presentation">
+              <defs>
+                <linearGradient id="islandTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a5145"/><stop offset=".42" stop-color="#20251f"/><stop offset="1" stop-color="#080908"/></linearGradient>
+                <linearGradient id="islandSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#242a23"/><stop offset="1" stop-color="#050605"/></linearGradient>
+                <radialGradient id="islandGlow"><stop stop-color="#b9ff38" stop-opacity=".28"/><stop offset="1" stop-color="#b9ff38" stop-opacity="0"/></radialGradient>
+                <filter id="islandBlur"><feGaussianBlur stdDeviation="18"/></filter>
+              </defs>
+              <ellipse cx="350" cy="395" rx="255" ry="48" fill="#000" opacity=".65" filter="url(#islandBlur)"/>
+              <g class="island-float">
+                <path class="island-side" d="M105 255 Q350 365 595 245 L570 310 Q350 430 130 320Z" fill="url(#islandSide)"/>
+                <path class="island-top" d="M105 245 Q350 105 595 238 Q350 350 105 245Z" fill="url(#islandTop)" stroke="#687060" stroke-width="3"/>
+                <path d="M145 242 Q350 130 555 238 Q350 315 145 242Z" fill="none" stroke="#b9ff38" stroke-opacity=".18"/>
+                <ellipse cx="340" cy="215" rx="180" ry="105" fill="url(#islandGlow)" opacity=".45"/>
+                <g class="island-buildings">
+                  <path d="M190 205 L190 125 L250 102 L250 180Z" fill="#30372d" stroke="#747d6d" stroke-width="3"/>
+                  <path d="M260 184 L260 75 L315 55 L315 165Z" fill="#171c17" stroke="#697263" stroke-width="3"/>
+                  <path d="M405 170 L405 72 L455 92 L455 190Z" fill="#30372d" stroke="#747d6d" stroke-width="3"/>
+                  <path d="M470 205 L470 120 L520 105 L520 190Z" fill="#111511" stroke="#596153" stroke-width="3"/>
+                  <path d="M328 170 L328 105 L380 88 L380 165Z" fill="#555e4f" stroke="#8a9380" stroke-width="3"/>
+                </g>
+                <circle cx="350" cy="215" r="7" fill="#b9ff38" class="island-light"/>
+                <text x="205" y="265" fill="#b9ff38" font-family="Space Grotesk" font-size="42" font-weight="600">01</text>
+                <text x="410" y="255" fill="#d8ddd4" font-family="Space Grotesk" font-size="13" letter-spacing="2">FROM IDEA</text>
+                <text x="410" y="275" fill="#d8ddd4" font-family="Space Grotesk" font-size="13" letter-spacing="2">TO IMPACT</text>
+              </g>
+            </svg>
           </div>
+          <div class="art-card card-main"><span class="tiny">ZERO ONE / 001</span><strong>IDEA<br><i>→</i> IMPACT</strong><div class="scan"></div><span class="card-coord">30.0444° N<br>31.2357° E</span></div>
           <div class="art-card card-small"><span>01</span><b>CREATE<br>WITH INTENT.</b></div>
           <div class="art-pill">CREATIVE / DIGITAL / BRAND</div>
         </div>
