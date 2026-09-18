@@ -81,3 +81,4 @@ if(art&&!reduced){
     art.style.transform=`translate3d(0,${y}px,0)`;
   },{passive:true});
 }
+const island=document.querySelector('.hero-island');const heroArt=document.querySelector('.hero-art');if(island&&heroArt&&window.matchMedia('(pointer:fine)').matches){heroArt.addEventListener('pointermove',e=>{const r=heroArt.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;island.style.transform=`translate(calc(-50% + ${x*14}px),calc(-50% + ${y*10}px)) rotateX(${58-y*5}deg) rotateZ(${-7+x*5}deg)`});heroArt.addEventListener('pointerleave',()=>island.style.transform='translate(-50%,-50%) rotateX(58deg) rotateZ(-7deg)');}
