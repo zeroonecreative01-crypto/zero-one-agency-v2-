@@ -78,3 +78,7 @@ function pricingForm(row){
 
 function openCaseStudy(slug){if(!slug||!db)return;db.from("projects").select("*").eq("slug",slug).maybeSingle().then(({data})=>{if(!data)return;const g=Array.isArray(data.gallery)?data.gallery:[];const el=document.createElement("div");el.className="case-modal";el.innerHTML='<div class="case-modal-inner"><button class="case-close">×</button><small>'+esc(data.category||"CASE STUDY")+' · '+esc(data.year||"")+'</small><h2>'+esc(data.name)+'</h2><p>'+esc(data.description||data.short_description||"")+'</p><div class="case-gallery">'+g.map(u=>'<img src="'+esc(u)+'" alt="'+esc(data.name)+'">').join("")+'</div></div>';document.body.appendChild(el);requestAnimationFrame(()=>el.classList.add("open"));el.querySelector(".case-close").onclick=()=>el.remove()})}
 document.addEventListener("click",e=>{const card=e.target.closest(".project[data-slug]");if(card)openCaseStudy(card.dataset.slug)});
+const navWrap=document.querySelector(".nav-wrap"), menu=document.querySelector(".menu");
+if(menu)menu.onclick=()=>navWrap.classList.toggle("nav-open");
+document.querySelectorAll(".nav-wrap nav a").forEach(a=>a.addEventListener("click",()=>navWrap.classList.remove("nav-open")));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")navWrap.classList.remove("nav-open")});
