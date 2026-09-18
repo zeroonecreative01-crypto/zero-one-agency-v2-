@@ -46,3 +46,14 @@ html{scroll-behavior:smooth}
   .project,.project-visual img,.service,.plan{transition:none!important;transform:none!important}
   .island-float{animation:none!important}
 }
+/* EXTRA EDITORIAL MOTION */
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:2px;z-index:10000;background:transparent;pointer-events:none}
+.scroll-progress span{display:block;width:var(--scroll,0%);height:100%;background:var(--accent);box-shadow:0 0 12px #F14A0B88;transition:width .08s linear}
+.hero h1{letter-spacing:-.055em}
+.hero h1 em{display:inline-block;animation:heroMark 2.8s ease-in-out infinite}
+@keyframes heroMark{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.art-grid{opacity:.35;transform:perspective(700px) rotateX(58deg) translateY(30px);animation:gridDrift 9s ease-in-out infinite}
+@keyframes gridDrift{0%,100%{transform:perspective(700px) rotateX(58deg) translateY(30px) scale(1)}50%{transform:perspective(700px) rotateX(58deg) translateY(24px) scale(1.025)}}
+.island-light{animation:lightPulse 2.4s ease-in-out infinite}
+@keyframes lightPulse{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+@media(prefers-reduced-motion:reduce){.hero h1 em,.art-grid,.island-light{animation:none}}
